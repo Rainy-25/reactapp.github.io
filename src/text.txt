@@ -1,0 +1,19 @@
+.gitignore >>>git
+git config --global user.name "KaungMyatHun-15691"
+git config --global user.email "kaungmyathun7@gmail.com"
+initialize >>> git init
+log
+got add (add )
+git add text.txt
+>>>>>>>>
+git add . 
+git commit >>>> file 
+git commit -m "using chart js"
+git remote add origin
+https://github.com/KaungMyatHun-15691/web-foundation.git
+git branch -M(create branch )branch-name
+branch-name === main / dev ()
+git branch -M dev
+git push origin branch-name
+
+git clone link >>>

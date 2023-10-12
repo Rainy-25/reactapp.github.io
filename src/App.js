@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+const { useEffect } = require("react")
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function ReactUseEffect() {
+    const [count, setCount] = useState(0)
+    const [data, setData] = useState([])
+    useEffect( () => {
+        console.log("this is useeffect")
+        axios.get("")
+        .then((response) => {
+            console.log(response.data)
+            setData(response.data)
+        })
+        .catch((err) => console.log(err))
+
+    }, [])
+    return (<>
+    <h3>count : {count}</h3>
+    <button onClick={() =>{
+        setCount(count+1)
+     }}>+1</button>
+     {data.map((item) => (
+        <h3 key={item.id}>{item.name}</h3>
+     ))}
+    </>
+
+    )
 }
-
-export default App;
